@@ -1,0 +1,143 @@
+<!-- Ejercicio de práctica del módulo 1 HTML - Práctica P8a - Utiliza una serie de elementos en bloque y en línea y entiende la diferencia de visualización entre unos y otros.
+Haz uso de elementos anidados para ver las dificultades de uso en ciertos casos y cómo afectan las condiciones de “bloque” dentro de ellos.
+
+Es un ejemplo de compresión conceptual, por lo que te pedimos que realices la estructura con y sin errores y comentes detalladamente las conclusiones que has sacado del experimento. -->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Elementos en bloque y en línea</title>
+	</head>
+	<body>
+		<h1>Elementos de Bloque</h1>
+			<address>Elemento de bloque "address": información de contacto</address>
+			<article>Elemento de bloque "article": contenido de artículo</article>
+			<aside>Elemento de bloque "aside": contenido adicional</aside>
+			<blockquote>Elemento de bloque "blackquote": bloque de cita</blockquote>
+			<div>Elemento de bloque "div": división de documento
+				<dl>Elemento de bloque "dl": lista de definición<br><br>
+					<dt>Título del elemento a definir 1</dt>
+						<dd>Definición del término de definir 1</dd><br>
+					<dt>Título del elemento a definir 2</dt>
+						<dd>Definición del término de definir 2</dd><br>
+					<dt>Título del elemento a definir 3</dt>
+						<dd>Definición del término de definir 3</dd><br>
+				</dl>
+			</div>
+			<hr>
+			<figure>Elemento de bloque "figure": grupos contenido multimedia con una leyenda<br>
+				<img src="images/el-resplandor.jpg" alt="El Resplandor"/>
+				<figcaption>Pie de foto atributo "figcaption"</figcaption>
+			</figure>
+			<footer>Elemento de bloque "footer": pie de página
+				<nav>Elemento de bloque "nav": contiene enlaces de navegación
+					<ul>
+						<li><a href="https://www.imdb.com/title/tt0068646/" target="_blank">Inicio</a></li>
+						<li><a href="https://www.imdb.com/title/tt0068646/" target="_blank">Sobre Nosotros</a></li>
+					</ul>
+				</nav>
+			</footer>
+			<hr>
+			<form>Elemento de bloque "form": formulario de entrada
+				<fieldset>
+					<legend>Información Personal</legend>
+					Nombre: <input name="nombre" type="texto">
+					Apellidos: <input name="apellidos" type="texto">
+				</fieldset>
+				<fieldset>
+					<legend>Dirección de Envío</legend>
+					Calle: <input name="calle" type="texto">
+					Ciudad:<input name="ciudad" type="texto">
+					Código Postal: <input name="cp" type="texto">
+				</fieldset>
+				<fieldset>
+				 	<legend>Edad</legend>
+				 	<input name="edad" type='checkbox' value='20-39'> 20-39 <br>
+				 	<input name='edad' type='checkbox' value='40-59'> 40-59 <br>
+				 	<input name='edad' type='checkbox' value='60-79'> 60-79
+				</fieldset>
+			</form>
+			<hr>
+			<header>Elemento de bloque "header": sección o cabecera de página</header>
+			<hr>Regla horizontal divisoria (No necesita etiqueta de cierre y el texto es opcional)
+			<main>Elemento de bloque "main": engloba el único contenido central del documento</main>
+			<noscript>Elemento de bloque "noscript": contenido para ser usado si los scripts no son soportados o permitidos</noscript>
+			<ol>Elemento de bloque "ol": lista ordenada
+				<li>Elemento de bloque "li": elemento de lista</li>
+			</ol>
+			<output>Elemento de bloque "output": formulario de salida (No ocupa todo el ancho de la pantalla, pero sí salta de línea)</output>
+			<p>Elemento de bloque "p": párrafo (incluye salto de línea)</p>
+			<pre>Elemento de bloque "pre": texto preformateado</pre>
+			<section>Elemento de bloque "section": sección de una página web</section>
+			<hr>
+			<table border='1'>
+				<caption><strong>Tabla sin Colgroup y con "thead",  "tbody" y "tfoot"</strong></caption>
+				<thead bgcolor="#000000">
+					<tr style="color:#FFFFFF">
+						<th>Contenido de cabecera 1</th>
+						<th>Contenido de cabecera 2</th>
+						<th>Contenido de cabecera 3</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cuerpo 1</td>
+						<td>Cuerpo 2</td>
+						<td>Cuerpo 3</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Pie 1</td>
+						<td>Pie 2</td>
+						<td>Pie 3</td>
+					</tr>
+				</tfoot>
+			</table>
+			<hr>
+			<table border="1">
+				<caption><strong>Tabla sin Colgroup solamente usando "tr", "th" y "td"</strong></caption>
+				<tr bgcolor="#000000" style="color:#FFFFFF">
+					<th>Contenido de cabecera 1</th>
+					<th>Contenido de cabecera 2</th>
+					<th>Contenido de cabecera 3</th>
+				</tr>
+				<tr>
+					<td>Cuerpo 1</td>
+					<td>Cuerpo 2</td>
+					<td>Cuerpo 3</td>
+				</tr>
+				<tr>
+					<td>Pie 1</td>
+					<td>Pie 2</td>
+					<td>Pie 3</td>
+				</tr>
+			</table>
+			<hr>
+			<table border="1">
+				<caption><strong>Tabla con Colgroup y "tr", "th" y "td"</strong></caption>
+				<colgroup span="3"></colgroup>
+				<tr bgcolor="#000000" style="color:#FFFFFF">
+					<th>Contenido de cabecera 1</th>
+					<th>Contenido de cabecera 2</th>
+					<th>Contenido de cabecera 3</th>
+				</tr>
+				<tr>
+					<td>Cuerpo 1</td>
+					<td>Cuerpo 2</td>
+					<td>Cuerpo 3</td>
+				</tr>
+				<tr>
+					<td>Pie 1</td>
+					<td>Pie 2</td>
+					<td>Pie 3</td>
+				</tr>
+			</table>
+			<hr>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/bQJd73oIE30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<h1>Elementos en Línea</h1>
+		<button>Botón</button>
+	</body>
+</html>
